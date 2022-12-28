@@ -5,23 +5,22 @@ Library    ScreenCapLibrary
 
 *** Variables ***
 
-${textotitulo}    tituloEditado
-${descripcion}    descEditada
+${textotitulo}    gamayatx
+${descripcion}    Agas1234
 
 *** Test Cases ***
 
 Registrar tarea
 
-    Open Browser    https://apptareas.herokuapp.com/create    chrome
-    Start Video Recording    alias=None    name=DemoRecording    fps=none    size_percentage=1    embed=True    embed_width=100px    monitor=1   
+    Open Browser    https://almacc.tustributos.com/    chrome
+    Start Video Recording    alias=None    name=Iniciar Sesión   fps=none    size_percentage=1    embed=True    embed_width=100px    monitor=1   
     Maximize Browser Window
     Sleep    1s
-    Input Text    name=title    ${textotitulo}
-    Input Text    name=description    ${descripcion} 
+    Input Text    name=txtUserName    ${textotitulo}
+    Input Text    name=txtUserPassword   ${descripcion} 
     Sleep    1s
-    Submit Form    class=mt-4
-    Sleep    1s
+    Click Button   name=linLogin
+    
     Stop Video Recording    alias=None
     Close All Browsers
-
 
