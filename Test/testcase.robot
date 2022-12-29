@@ -1,6 +1,7 @@
 *** Settings ***
 Library    Selenium2Library
 Library    ScreenCapLibrary
+Library    JIRALibrary
 Library    ../xmlReader.py
 
 *** Keywords ***
@@ -58,9 +59,9 @@ Crear Sujeto Pasivo
 
 
 *** Variables ***
-
-${txtUser1}    gamayatx
-${txtPas11s}    Agas1234
+${URL}      https://jira.com
+${USER}     ARI CC Testing
+${PASS}     ACT
 
 *** Test Cases ***
 
