@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- <crudnodejs> -->
-<tasks>
-  <task>
-    <title>Titulo 1</title>
-    <descripcion>Descripcion 1</descripcion>
-  </task>
+<users>
+  <user>
+    <username>gamayatx</username>
+    <password>Agas1234</password>
+  </user>
 
-   <task>
-    <title>Titulo 1</title>
-    <descripcion>Descripcion 1</descripcion>
-</task>
+   <user>
+    <username>Titulo 1</username>
+    <password>Descripcion 1</password>
+</user>
 
-  </tasks>
+  </users>
 <!-- </crudnodejs> -->

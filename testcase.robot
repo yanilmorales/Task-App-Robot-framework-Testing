@@ -1,15 +1,31 @@
 *** Settings ***
 Library    Selenium2Library
 Library    ScreenCapLibrary
+Library    xmlReader.py
 
 *** Keywords ***
 
-Log my username    Input Text    name=txtUserName    ${txtUser}    
+Leer username
+    ${txtUser}=    Leer Xml User
+    [return]    ${txtUser}
+
+Leer password
+    ${txtPass}=    Leer Xml Pass
+    [return]    ${txtPass}
+
+Log my username
+    ${txtUser}=    Leer username 
+    Input Text    name=txtUserName    ${txtUser}    
     Sleep    1s
-Log my password    Input Text    name=txtUserPassword    ${txtPass}
+
+Log my password    
+    ${txtPass}=    Leer password
+    Input Text    name=txtUserPassword    ${txtPass}
     Sleep    1s
+
 Login              Click Button    name=linLogin
     Sleep    1s
+
 Login Succesful      Page Should Contain    Identificador:   
     Sleep    1s
 
@@ -30,8 +46,8 @@ Crear Sujeto Pasivo
 
 *** Variables ***
 
-${txtUser}    gamayatx
-${txtPass}    Agas1234
+${txtUser1}    gamayatx
+${txtPas11s}    Agas1234
 
 *** Test Cases ***
 

@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.1 (Python 3.11.1 on win32)" generated="20221228 15:46:40.384" rpa="false" schemaversion="3">
-<suite id="s1" name="Testcase" source="c:\Users\Usuario\Downloads\PythonTesting\testcase.robot">
-<test id="s1-t1" name="Creacion de sujeto pasivo" line="39">
+<robot generator="Robot 6.0.1 (Python 3.11.1 on win32)" generated="20221229 10:06:29.206" rpa="false" schemaversion="3">
+<suite id="s1" name="Testcase" source="c:\Users\Usuario\Downloads\robotf-testing\Task-App-Robot-framework-Testing\testcase.robot">
+<test id="s1-t1" name="Creacion de sujeto pasivo" line="55">
 <kw name="Abrir Navegador">
 <kw name="Open Browser" library="Selenium2Library">
 <arg>https://almacc.tustributos.com</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221228 15:46:40.935" level="INFO">Opening browser 'chrome' to base url 'https://almacc.tustributos.com'.</msg>
-<status status="PASS" starttime="20221228 15:46:40.934" endtime="20221228 15:46:45.201"/>
+<msg timestamp="20221229 10:06:29.751" level="INFO">Opening browser 'chrome' to base url 'https://almacc.tustributos.com'.</msg>
+<status status="PASS" starttime="20221229 10:06:29.750" endtime="20221229 10:06:33.611"/>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221228 15:46:45.202" endtime="20221228 15:46:45.333"/>
+<status status="PASS" starttime="20221229 10:06:33.612" endtime="20221229 10:06:33.829"/>
 </kw>
-<status status="PASS" starttime="20221228 15:46:40.933" endtime="20221228 15:46:45.334"/>
+<status status="PASS" starttime="20221229 10:06:29.749" endtime="20221229 10:06:33.830"/>
 </kw>
 <kw name="Start Video Recording" library="ScreenCapLibrary">
 <arg>alias=None</arg>
@@ -26,91 +26,111 @@
 <arg>monitor=1</arg>
 <doc>Starts the recording of a video in the background with the specified ``name``.
 The recording can be stopped by calling the `Stop Video Recording` keyword.</doc>
-<msg timestamp="20221228 15:46:47.624" level="INFO">Automatically setting a fps of 7.0</msg>
-<status status="PASS" starttime="20221228 15:46:45.334" endtime="20221228 15:46:47.627"/>
+<msg timestamp="20221229 10:06:35.981" level="INFO">Automatically setting a fps of 7.5</msg>
+<status status="PASS" starttime="20221229 10:06:33.832" endtime="20221229 10:06:35.983"/>
 </kw>
 <kw name="lOGEARSE">
 <kw name="Log my username">
+<kw name="Leer username">
+<var>${txtUser}</var>
+<kw name="Leer Xml User" library="xmlReader">
+<var>${txtUser}</var>
+<msg timestamp="20221229 10:06:35.993" level="INFO">${txtUser} = gamayatx</msg>
+<status status="PASS" starttime="20221229 10:06:35.990" endtime="20221229 10:06:35.993"/>
+</kw>
+<msg timestamp="20221229 10:06:35.994" level="INFO">${txtUser} = gamayatx</msg>
+<status status="PASS" starttime="20221229 10:06:35.989" endtime="20221229 10:06:35.994"/>
+</kw>
 <kw name="Input Text" library="Selenium2Library">
 <arg>name=txtUserName</arg>
 <arg>${txtUser}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221228 15:46:47.633" level="INFO">Typing text 'gamayatx' into text field 'name=txtUserName'.</msg>
-<status status="PASS" starttime="20221228 15:46:47.632" endtime="20221228 15:46:47.747"/>
+<msg timestamp="20221229 10:06:35.996" level="INFO">Typing text 'gamayatx' into text field 'name=txtUserName'.</msg>
+<status status="PASS" starttime="20221229 10:06:35.995" endtime="20221229 10:06:36.098"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221228 15:46:48.748" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20221228 15:46:47.747" endtime="20221228 15:46:48.748"/>
+<msg timestamp="20221229 10:06:37.100" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20221229 10:06:36.098" endtime="20221229 10:06:37.100"/>
 </kw>
-<status status="PASS" starttime="20221228 15:46:47.632" endtime="20221228 15:46:48.749"/>
+<status status="PASS" starttime="20221229 10:06:35.984" endtime="20221229 10:06:37.101"/>
 </kw>
 <kw name="Log my password">
+<kw name="Leer password">
+<var>${txtPass}</var>
+<kw name="Leer Xml Pass" library="xmlReader">
+<var>${txtPass}</var>
+<msg timestamp="20221229 10:06:37.103" level="INFO">${txtPass} = Agas1234</msg>
+<status status="PASS" starttime="20221229 10:06:37.102" endtime="20221229 10:06:37.104"/>
+</kw>
+<msg timestamp="20221229 10:06:37.104" level="INFO">${txtPass} = Agas1234</msg>
+<status status="PASS" starttime="20221229 10:06:37.101" endtime="20221229 10:06:37.105"/>
+</kw>
 <kw name="Input Text" library="Selenium2Library">
 <arg>name=txtUserPassword</arg>
 <arg>${txtPass}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221228 15:46:48.751" level="INFO">Typing text 'Agas1234' into text field 'name=txtUserPassword'.</msg>
-<status status="PASS" starttime="20221228 15:46:48.750" endtime="20221228 15:46:48.913"/>
+<msg timestamp="20221229 10:06:37.106" level="INFO">Typing text 'Agas1234' into text field 'name=txtUserPassword'.</msg>
+<status status="PASS" starttime="20221229 10:06:37.105" endtime="20221229 10:06:37.262"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221228 15:46:49.915" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20221228 15:46:48.913" endtime="20221228 15:46:49.915"/>
+<msg timestamp="20221229 10:06:38.264" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20221229 10:06:37.262" endtime="20221229 10:06:38.264"/>
 </kw>
-<status status="PASS" starttime="20221228 15:46:48.749" endtime="20221228 15:46:49.916"/>
+<status status="PASS" starttime="20221229 10:06:37.101" endtime="20221229 10:06:38.265"/>
 </kw>
 <kw name="Login">
 <kw name="Click Button" library="Selenium2Library">
 <arg>name=linLogin</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221228 15:46:49.918" level="INFO">Clicking button 'name=linLogin'.</msg>
-<status status="PASS" starttime="20221228 15:46:49.917" endtime="20221228 15:46:51.555"/>
+<msg timestamp="20221229 10:06:38.267" level="INFO">Clicking button 'name=linLogin'.</msg>
+<status status="PASS" starttime="20221229 10:06:38.266" endtime="20221229 10:06:39.469"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221228 15:46:52.557" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20221228 15:46:51.556" endtime="20221228 15:46:52.558"/>
+<msg timestamp="20221229 10:06:40.472" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20221229 10:06:39.470" endtime="20221229 10:06:40.473"/>
 </kw>
-<status status="PASS" starttime="20221228 15:46:49.916" endtime="20221228 15:46:52.558"/>
+<status status="PASS" starttime="20221229 10:06:38.265" endtime="20221229 10:06:40.473"/>
 </kw>
 <kw name="Login Succesful">
 <kw name="Page Should Contain" library="Selenium2Library">
 <arg>Identificador:</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20221228 15:46:52.666" level="INFO">Current page contains text 'Identificador:'.</msg>
-<status status="PASS" starttime="20221228 15:46:52.559" endtime="20221228 15:46:52.666"/>
+<msg timestamp="20221229 10:06:40.591" level="INFO">Current page contains text 'Identificador:'.</msg>
+<status status="PASS" starttime="20221229 10:06:40.478" endtime="20221229 10:06:40.592"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221228 15:46:53.667" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20221228 15:46:52.666" endtime="20221228 15:46:53.667"/>
+<msg timestamp="20221229 10:06:41.594" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20221229 10:06:40.592" endtime="20221229 10:06:41.594"/>
 </kw>
-<status status="PASS" starttime="20221228 15:46:52.558" endtime="20221228 15:46:53.667"/>
+<status status="PASS" starttime="20221229 10:06:40.473" endtime="20221229 10:06:41.594"/>
 </kw>
-<status status="PASS" starttime="20221228 15:46:47.628" endtime="20221228 15:46:53.667"/>
+<status status="PASS" starttime="20221229 10:06:35.984" endtime="20221229 10:06:41.595"/>
 </kw>
 <kw name="Crear Sujeto Pasivo">
 <kw name="Page Should Contain" library="Selenium2Library">
 <arg>Identificador:</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20221228 15:46:53.750" level="INFO">Current page contains text 'Identificador:'.</msg>
-<status status="PASS" starttime="20221228 15:46:53.669" endtime="20221228 15:46:53.751"/>
+<msg timestamp="20221229 10:06:41.692" level="INFO">Current page contains text 'Identificador:'.</msg>
+<status status="PASS" starttime="20221229 10:06:41.597" endtime="20221229 10:06:41.693"/>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <arg>id=textSearchId</arg>
 <arg>textoPrueba</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221228 15:46:53.752" level="INFO">Typing text 'textoPrueba' into text field 'id=textSearchId'.</msg>
-<msg timestamp="20221228 15:46:53.938" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20221228 15:46:53.939" level="FAIL">Element with locator 'id=textSearchId' not found.</msg>
-<status status="FAIL" starttime="20221228 15:46:53.751" endtime="20221228 15:46:53.944"/>
+<msg timestamp="20221229 10:06:41.694" level="INFO">Typing text 'textoPrueba' into text field 'id=textSearchId'.</msg>
+<msg timestamp="20221229 10:06:41.890" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20221229 10:06:41.891" level="FAIL">Element with locator 'id=textSearchId' not found.</msg>
+<status status="FAIL" starttime="20221229 10:06:41.693" endtime="20221229 10:06:41.895"/>
 </kw>
-<status status="FAIL" starttime="20221228 15:46:53.668" endtime="20221228 15:46:53.944"/>
+<status status="FAIL" starttime="20221229 10:06:41.596" endtime="20221229 10:06:41.895"/>
 </kw>
 <kw name="Stop Video Recording" library="ScreenCapLibrary">
 <arg>alias=None</arg>
@@ -120,17 +140,17 @@ alias all of them will be closed. If ``embed`` argument was set to
 ``True`` the video will be displayed in the log file.
 Furthermore, if the ``save_to_disk`` parameter is set to ``False``, the video will be embedded and available in
 the log file only.</doc>
-<status status="NOT RUN" starttime="20221228 15:46:53.946" endtime="20221228 15:46:53.946"/>
+<status status="NOT RUN" starttime="20221229 10:06:41.897" endtime="20221229 10:06:41.897"/>
 </kw>
 <kw name="Close All Browsers" library="Selenium2Library">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="NOT RUN" starttime="20221228 15:46:53.947" endtime="20221228 15:46:53.947"/>
+<status status="NOT RUN" starttime="20221229 10:06:41.898" endtime="20221229 10:06:41.898"/>
 </kw>
 <doc>Creación de sujeto pasivo natural</doc>
 <tag>Sujeto pasivo, trámite</tag>
-<status status="FAIL" starttime="20221228 15:46:40.932" endtime="20221228 15:46:53.948">Element with locator 'id=textSearchId' not found.</status>
+<status status="FAIL" starttime="20221229 10:06:29.748" endtime="20221229 10:06:41.899">Element with locator 'id=textSearchId' not found.</status>
 </test>
-<status status="FAIL" starttime="20221228 15:46:40.389" endtime="20221228 15:46:53.952"/>
+<status status="FAIL" starttime="20221229 10:06:29.210" endtime="20221229 10:06:41.909"/>
 </suite>
 <statistics>
 <total>
