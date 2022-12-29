@@ -40,8 +40,14 @@ lOGEARSE
     Login Succesful
 
 Crear Sujeto Pasivo
-    Page Should Contain    Identificador:
-    Input Text       id=textSearchId    textoPrueba
+    ${tempb}=    Get Title
+    Log To Console    New windows is: \ ${tempb}
+    Select Frame    name=fastway
+    Wait Until Element Is Visible    name=textSearchId
+    Input Text       name=textSearchId    0842207680000K
+    Sleep     1s
+    Click Element    name=buttonSearch
+    Sleep     1s
 
 
 *** Variables ***
