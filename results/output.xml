@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.1 (Python 3.11.1 on win32)" generated="20221229 10:53:19.785" rpa="false" schemaversion="3">
-<suite id="s1" name="Testcase" source="c:\Users\Usuario\Downloads\robotf-testing\Task-App-Robot-framework-Testing\testcase.robot">
-<test id="s1-t1" name="Creacion de sujeto pasivo" line="61">
+<robot generator="Robot 6.0.1 (Python 3.11.1 on win32)" generated="20221229 11:33:01.768" rpa="false" schemaversion="3">
+<suite id="s1" name="Testcase" source="c:\Users\Usuario\Downloads\robotf-testing\Task-App-Robot-framework-Testing\Test\testcase.robot">
+<test id="s1-t1" name="Creacion de sujeto pasivo" line="66">
 <kw name="Abrir Navegador">
 <kw name="Open Browser" library="Selenium2Library">
 <arg>https://almacc.tustributos.com</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221229 10:53:20.328" level="INFO">Opening browser 'chrome' to base url 'https://almacc.tustributos.com'.</msg>
-<status status="PASS" starttime="20221229 10:53:20.327" endtime="20221229 10:53:23.792"/>
+<msg timestamp="20221229 11:33:02.308" level="INFO">Opening browser 'chrome' to base url 'https://almacc.tustributos.com'.</msg>
+<status status="PASS" starttime="20221229 11:33:02.306" endtime="20221229 11:33:06.248"/>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221229 10:53:23.793" endtime="20221229 10:53:23.945"/>
+<status status="PASS" starttime="20221229 11:33:06.249" endtime="20221229 11:33:06.365"/>
 </kw>
-<status status="PASS" starttime="20221229 10:53:20.326" endtime="20221229 10:53:23.946"/>
+<status status="PASS" starttime="20221229 11:33:02.305" endtime="20221229 11:33:06.365"/>
 </kw>
+<kw name="Iniciar Grabacion">
 <kw name="Start Video Recording" library="ScreenCapLibrary">
 <arg>alias=None</arg>
 <arg>name=Iniciar Sesión</arg>
@@ -26,164 +27,169 @@
 <arg>monitor=1</arg>
 <doc>Starts the recording of a video in the background with the specified ``name``.
 The recording can be stopped by calling the `Stop Video Recording` keyword.</doc>
-<msg timestamp="20221229 10:53:26.127" level="INFO">Automatically setting a fps of 7.5</msg>
-<status status="PASS" starttime="20221229 10:53:23.946" endtime="20221229 10:53:26.132"/>
+<msg timestamp="20221229 11:33:08.498" level="INFO">Automatically setting a fps of 7.0</msg>
+<status status="PASS" starttime="20221229 11:33:06.366" endtime="20221229 11:33:08.500"/>
 </kw>
-<kw name="lOGEARSE">
+<status status="PASS" starttime="20221229 11:33:06.366" endtime="20221229 11:33:08.500"/>
+</kw>
+<kw name="Iniciar sesion">
 <kw name="Log my username">
 <kw name="Leer username">
 <var>${txtUser}</var>
 <kw name="Leer Xml User" library="xmlReader">
 <var>${txtUser}</var>
-<msg timestamp="20221229 10:53:26.144" level="INFO">${txtUser} = gamayatx</msg>
-<status status="PASS" starttime="20221229 10:53:26.141" endtime="20221229 10:53:26.144"/>
+<msg timestamp="20221229 11:33:08.513" level="INFO">${txtUser} = gamayatx</msg>
+<status status="PASS" starttime="20221229 11:33:08.508" endtime="20221229 11:33:08.513"/>
 </kw>
-<msg timestamp="20221229 10:53:26.144" level="INFO">${txtUser} = gamayatx</msg>
-<status status="PASS" starttime="20221229 10:53:26.140" endtime="20221229 10:53:26.144"/>
+<msg timestamp="20221229 11:33:08.514" level="INFO">${txtUser} = gamayatx</msg>
+<status status="PASS" starttime="20221229 11:33:08.507" endtime="20221229 11:33:08.514"/>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <arg>name=txtUserName</arg>
 <arg>${txtUser}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221229 10:53:26.145" level="INFO">Typing text 'gamayatx' into text field 'name=txtUserName'.</msg>
-<status status="PASS" starttime="20221229 10:53:26.145" endtime="20221229 10:53:26.272"/>
+<msg timestamp="20221229 11:33:08.516" level="INFO">Typing text 'gamayatx' into text field 'name=txtUserName'.</msg>
+<status status="PASS" starttime="20221229 11:33:08.514" endtime="20221229 11:33:08.616"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221229 10:53:27.274" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20221229 10:53:26.273" endtime="20221229 10:53:27.274"/>
+<msg timestamp="20221229 11:33:09.622" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20221229 11:33:08.617" endtime="20221229 11:33:09.624"/>
 </kw>
-<status status="PASS" starttime="20221229 10:53:26.135" endtime="20221229 10:53:27.275"/>
+<status status="PASS" starttime="20221229 11:33:08.505" endtime="20221229 11:33:09.625"/>
 </kw>
 <kw name="Log my password">
 <kw name="Leer password">
 <var>${txtPass}</var>
 <kw name="Leer Xml Pass" library="xmlReader">
 <var>${txtPass}</var>
-<msg timestamp="20221229 10:53:27.278" level="INFO">${txtPass} = Agas1234</msg>
-<status status="PASS" starttime="20221229 10:53:27.277" endtime="20221229 10:53:27.278"/>
+<msg timestamp="20221229 11:33:09.628" level="INFO">${txtPass} = Agas1234</msg>
+<status status="PASS" starttime="20221229 11:33:09.626" endtime="20221229 11:33:09.629"/>
 </kw>
-<msg timestamp="20221229 10:53:27.279" level="INFO">${txtPass} = Agas1234</msg>
-<status status="PASS" starttime="20221229 10:53:27.276" endtime="20221229 10:53:27.279"/>
+<msg timestamp="20221229 11:33:09.629" level="INFO">${txtPass} = Agas1234</msg>
+<status status="PASS" starttime="20221229 11:33:09.626" endtime="20221229 11:33:09.630"/>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <arg>name=txtUserPassword</arg>
 <arg>${txtPass}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221229 10:53:27.281" level="INFO">Typing text 'Agas1234' into text field 'name=txtUserPassword'.</msg>
-<status status="PASS" starttime="20221229 10:53:27.279" endtime="20221229 10:53:27.470"/>
+<msg timestamp="20221229 11:33:09.631" level="INFO">Typing text 'Agas1234' into text field 'name=txtUserPassword'.</msg>
+<status status="PASS" starttime="20221229 11:33:09.630" endtime="20221229 11:33:09.850"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221229 10:53:28.472" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20221229 10:53:27.470" endtime="20221229 10:53:28.472"/>
+<msg timestamp="20221229 11:33:10.852" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20221229 11:33:09.851" endtime="20221229 11:33:10.852"/>
 </kw>
-<status status="PASS" starttime="20221229 10:53:27.275" endtime="20221229 10:53:28.473"/>
+<status status="PASS" starttime="20221229 11:33:09.625" endtime="20221229 11:33:10.853"/>
 </kw>
 <kw name="Login">
 <kw name="Click Button" library="Selenium2Library">
 <arg>name=linLogin</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221229 10:53:28.474" level="INFO">Clicking button 'name=linLogin'.</msg>
-<status status="PASS" starttime="20221229 10:53:28.473" endtime="20221229 10:53:30.143"/>
+<msg timestamp="20221229 11:33:10.855" level="INFO">Clicking button 'name=linLogin'.</msg>
+<status status="PASS" starttime="20221229 11:33:10.854" endtime="20221229 11:33:13.903"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221229 10:53:31.144" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20221229 10:53:30.143" endtime="20221229 10:53:31.144"/>
+<msg timestamp="20221229 11:33:14.905" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20221229 11:33:13.903" endtime="20221229 11:33:14.905"/>
 </kw>
-<status status="PASS" starttime="20221229 10:53:28.473" endtime="20221229 10:53:31.145"/>
+<status status="PASS" starttime="20221229 11:33:10.853" endtime="20221229 11:33:14.906"/>
 </kw>
 <kw name="Login Succesful">
 <kw name="Page Should Contain" library="Selenium2Library">
 <arg>Identificador:</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20221229 10:53:31.265" level="INFO">Current page contains text 'Identificador:'.</msg>
-<status status="PASS" starttime="20221229 10:53:31.145" endtime="20221229 10:53:31.266"/>
+<msg timestamp="20221229 11:33:15.028" level="INFO">Current page contains text 'Identificador:'.</msg>
+<status status="PASS" starttime="20221229 11:33:14.907" endtime="20221229 11:33:15.029"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221229 10:53:32.268" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20221229 10:53:31.266" endtime="20221229 10:53:32.269"/>
+<msg timestamp="20221229 11:33:16.031" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20221229 11:33:15.029" endtime="20221229 11:33:16.031"/>
 </kw>
-<status status="PASS" starttime="20221229 10:53:31.145" endtime="20221229 10:53:32.269"/>
+<status status="PASS" starttime="20221229 11:33:14.906" endtime="20221229 11:33:16.031"/>
 </kw>
-<status status="PASS" starttime="20221229 10:53:26.133" endtime="20221229 10:53:32.270"/>
+<status status="PASS" starttime="20221229 11:33:08.501" endtime="20221229 11:33:16.032"/>
 </kw>
 <kw name="Crear Sujeto Pasivo">
 <kw name="Get Title" library="Selenium2Library">
 <var>${tempb}</var>
 <doc>Returns the title of the current page.</doc>
-<msg timestamp="20221229 10:53:32.278" level="INFO">${tempb} = ARI - Managua</msg>
-<status status="PASS" starttime="20221229 10:53:32.272" endtime="20221229 10:53:32.278"/>
+<msg timestamp="20221229 11:33:16.038" level="INFO">${tempb} = ARI - Managua</msg>
+<status status="PASS" starttime="20221229 11:33:16.033" endtime="20221229 11:33:16.039"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>New windows is: \ ${tempb}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221229 10:53:32.279" endtime="20221229 10:53:32.280"/>
+<status status="PASS" starttime="20221229 11:33:16.039" endtime="20221229 11:33:16.044"/>
 </kw>
 <kw name="Select Frame" library="Selenium2Library">
 <arg>name=fastway</arg>
 <doc>Sets frame identified by ``locator`` as the current frame.</doc>
-<msg timestamp="20221229 10:53:32.281" level="INFO">Selecting frame 'name=fastway'.</msg>
-<status status="PASS" starttime="20221229 10:53:32.280" endtime="20221229 10:53:32.313"/>
+<msg timestamp="20221229 11:33:16.045" level="INFO">Selecting frame 'name=fastway'.</msg>
+<status status="PASS" starttime="20221229 11:33:16.044" endtime="20221229 11:33:16.072"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>name=textSearchId</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20221229 10:53:32.313" endtime="20221229 10:53:32.346"/>
+<status status="PASS" starttime="20221229 11:33:16.072" endtime="20221229 11:33:16.113"/>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <arg>name=textSearchId</arg>
 <arg>0842207680000K</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221229 10:53:32.347" level="INFO">Typing text '0842207680000K' into text field 'name=textSearchId'.</msg>
-<status status="PASS" starttime="20221229 10:53:32.346" endtime="20221229 10:53:32.455"/>
+<msg timestamp="20221229 11:33:16.115" level="INFO">Typing text '0842207680000K' into text field 'name=textSearchId'.</msg>
+<status status="PASS" starttime="20221229 11:33:16.114" endtime="20221229 11:33:16.220"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221229 10:53:33.457" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20221229 10:53:32.455" endtime="20221229 10:53:33.457"/>
+<msg timestamp="20221229 11:33:17.222" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20221229 11:33:16.221" endtime="20221229 11:33:17.222"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>name=buttonSearch</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221229 10:53:33.459" level="INFO">Clicking element 'name=buttonSearch'.</msg>
-<status status="PASS" starttime="20221229 10:53:33.458" endtime="20221229 10:53:33.781"/>
+<msg timestamp="20221229 11:33:17.224" level="INFO">Clicking element 'name=buttonSearch'.</msg>
+<status status="PASS" starttime="20221229 11:33:17.223" endtime="20221229 11:33:17.762"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221229 10:53:34.783" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20221229 10:53:33.781" endtime="20221229 10:53:34.783"/>
+<msg timestamp="20221229 11:33:18.764" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20221229 11:33:17.762" endtime="20221229 11:33:18.764"/>
 </kw>
-<status status="PASS" starttime="20221229 10:53:32.271" endtime="20221229 10:53:34.784"/>
+<status status="PASS" starttime="20221229 11:33:16.032" endtime="20221229 11:33:18.764"/>
 </kw>
+<kw name="Detener Grabacion">
 <kw name="Stop Video Recording" library="ScreenCapLibrary">
-<arg>alias=None</arg>
+<arg>alias=none</arg>
 <doc>Stops the video recording corresponding to the given ``alias`` and generates the file in WebM format. If no
 ``alias`` is specified, the last opened recording will be closed. If there are more recordings with the same
 alias all of them will be closed. If ``embed`` argument was set to
 ``True`` the video will be displayed in the log file.
 Furthermore, if the ``save_to_disk`` parameter is set to ``False``, the video will be embedded and available in
 the log file only.</doc>
-<msg timestamp="20221229 10:53:34.808" level="INFO" html="true">&lt;a href="Iniciar%20Sesi%C3%B3n_19.webm"&gt;&lt;video width="100px" autoplay&gt;&lt;source src="Iniciar%20Sesi%C3%B3n_19.webm" type="video/webm"&gt;&lt;/video&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20221229 10:53:34.784" endtime="20221229 10:53:34.809"/>
+<msg timestamp="20221229 11:33:18.849" level="INFO" html="true">&lt;a href="Iniciar%20Sesi%C3%B3n_1.webm"&gt;&lt;video width="100px" autoplay&gt;&lt;source src="Iniciar%20Sesi%C3%B3n_1.webm" type="video/webm"&gt;&lt;/video&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20221229 11:33:18.766" endtime="20221229 11:33:18.850"/>
+</kw>
+<status status="PASS" starttime="20221229 11:33:18.765" endtime="20221229 11:33:18.851"/>
 </kw>
 <kw name="Close All Browsers" library="Selenium2Library">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20221229 10:53:34.810" endtime="20221229 10:53:39.103"/>
+<status status="PASS" starttime="20221229 11:33:18.852" endtime="20221229 11:33:23.171"/>
 </kw>
 <doc>Creación de sujeto pasivo natural</doc>
 <tag>Sujeto pasivo, trámite</tag>
-<status status="PASS" starttime="20221229 10:53:20.325" endtime="20221229 10:53:39.104"/>
+<status status="PASS" starttime="20221229 11:33:02.304" endtime="20221229 11:33:23.173"/>
 </test>
-<status status="PASS" starttime="20221229 10:53:19.791" endtime="20221229 10:53:39.107"/>
+<status status="PASS" starttime="20221229 11:33:01.772" endtime="20221229 11:33:23.183"/>
 </suite>
 <statistics>
 <total>
