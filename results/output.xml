@@ -1,106 +1,285 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.1 (Python 3.11.1 on win32)" generated="20221229 13:56:38.355" rpa="false" schemaversion="3">
-<suite id="s1" name="boxModule" source="c:\Users\Usuario\Downloads\robotf-testing\Task-App-Robot-framework-Testing\Test\boxModule.robot">
-<test id="s1-t1" name="Connect To JIRA" line="13">
-<kw name="Connect To Jira" library="JIRALibrary">
-<var>${session}</var>
-<arg>${URL}</arg>
-<arg>${USER}</arg>
-<arg>${PASS}</arg>
-<doc>Connect To Jira    https://localhost:443/jira    user   password
-Full list of arguments https://atlassian-python-api.readthedocs.io/index.html</doc>
-<msg timestamp="20221229 13:56:38.657" level="INFO">${session} = &lt;atlassian.jira.Jira object at 0x000000B4BB49F910&gt;</msg>
-<status status="PASS" starttime="20221229 13:56:38.656" endtime="20221229 13:56:38.657"/>
+<robot generator="Robot 6.0.1 (Python 3.11.1 on win32)" generated="20230105 16:08:52.781" rpa="false" schemaversion="3">
+<suite id="s1" name="Testcase" source="c:\Users\Usuario\Downloads\robotf-testing\Task-App-Robot-framework-Testing\Test\testcase.robot">
+<test id="s1-t1" name="Creacion de sujeto pasivo" line="86">
+<kw name="Abrir Navegador">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>https://almacc.tustributos.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230105 16:08:53.570" level="INFO">Opening browser 'chrome' to base url 'https://almacc.tustributos.com'.</msg>
+<status status="PASS" starttime="20230105 16:08:53.568" endtime="20230105 16:08:58.101"/>
 </kw>
-<kw name="Projects" library="JIRALibrary">
-<var>${projects}</var>
-<arg>${session}</arg>
-<doc>Returns all projects which are visible for the currently logged in user.
-If no user is logged in, it returns the list of projects that are visible when using anonymous access.
-:param included_archived: boolean whether to include archived projects in response, default: false
-:param expand:
-:return:</doc>
-<msg timestamp="20221229 13:56:39.366" level="ERROR">Expecting value: line 1 column 1 (char 0)</msg>
-<msg timestamp="20221229 13:56:39.376" level="INFO">${projects} = &lt;!DOCTYPE html&gt;
-
-
-&lt;html id="magnolia" lang="en"&gt; &lt;head&gt; &lt;meta charset="utf-8"&gt; &lt;meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"&gt; &lt;meta name="viewport" content="width=device-width, initia...</msg>
-<status status="PASS" starttime="20221229 13:56:38.658" endtime="20221229 13:56:39.378"/>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230105 16:08:58.101" endtime="20230105 16:08:58.226"/>
 </kw>
-<status status="PASS" starttime="20221229 13:56:38.654" endtime="20221229 13:56:39.380"/>
+<status status="PASS" starttime="20230105 16:08:53.567" endtime="20230105 16:08:58.226"/>
+</kw>
+<kw name="Iniciar Grabacion">
+<kw name="Start Video Recording" library="ScreenCapLibrary">
+<arg>alias=None</arg>
+<arg>name=Iniciar Sesión</arg>
+<arg>fps=none</arg>
+<arg>size_percentage=1</arg>
+<arg>embed=True</arg>
+<arg>embed_width=100px</arg>
+<arg>monitor=1</arg>
+<doc>Starts the recording of a video in the background with the specified ``name``.
+The recording can be stopped by calling the `Stop Video Recording` keyword.</doc>
+<msg timestamp="20230105 16:09:00.399" level="INFO">Automatically setting a fps of 7.5</msg>
+<status status="PASS" starttime="20230105 16:08:58.227" endtime="20230105 16:09:00.402"/>
+</kw>
+<status status="PASS" starttime="20230105 16:08:58.227" endtime="20230105 16:09:00.402"/>
+</kw>
+<kw name="Iniciar sesion">
+<kw name="Log my username">
+<kw name="Leer username">
+<var>${txtUser}</var>
+<kw name="Leer Xml User" library="xmlReader">
+<var>${txtUser}</var>
+<msg timestamp="20230105 16:09:00.418" level="INFO">${txtUser} = gamayatx</msg>
+<status status="PASS" starttime="20230105 16:09:00.413" endtime="20230105 16:09:00.419"/>
+</kw>
+<msg timestamp="20230105 16:09:00.419" level="INFO">${txtUser} = gamayatx</msg>
+<status status="PASS" starttime="20230105 16:09:00.412" endtime="20230105 16:09:00.421"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>name=txtUserName</arg>
+<arg>${txtUser}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230105 16:09:00.423" level="INFO">Typing text 'gamayatx' into text field 'name=txtUserName'.</msg>
+<status status="PASS" starttime="20230105 16:09:00.422" endtime="20230105 16:09:00.523"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230105 16:09:01.524" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230105 16:09:00.524" endtime="20230105 16:09:01.525"/>
+</kw>
+<status status="PASS" starttime="20230105 16:09:00.411" endtime="20230105 16:09:01.526"/>
+</kw>
+<kw name="Log my password">
+<kw name="Leer password">
+<var>${txtPass}</var>
+<kw name="Leer Xml Pass" library="xmlReader">
+<var>${txtPass}</var>
+<msg timestamp="20230105 16:09:01.530" level="INFO">${txtPass} = Agas1234</msg>
+<status status="PASS" starttime="20230105 16:09:01.529" endtime="20230105 16:09:01.531"/>
+</kw>
+<msg timestamp="20230105 16:09:01.531" level="INFO">${txtPass} = Agas1234</msg>
+<status status="PASS" starttime="20230105 16:09:01.527" endtime="20230105 16:09:01.532"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>name=txtUserPassword</arg>
+<arg>${txtPass}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230105 16:09:01.533" level="INFO">Typing text 'Agas1234' into text field 'name=txtUserPassword'.</msg>
+<status status="PASS" starttime="20230105 16:09:01.532" endtime="20230105 16:09:01.669"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230105 16:09:02.670" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230105 16:09:01.670" endtime="20230105 16:09:02.670"/>
+</kw>
+<status status="PASS" starttime="20230105 16:09:01.526" endtime="20230105 16:09:02.671"/>
+</kw>
+<kw name="Login">
+<kw name="Click Button" library="Selenium2Library">
+<arg>name=linLogin</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230105 16:09:02.673" level="INFO">Clicking button 'name=linLogin'.</msg>
+<status status="PASS" starttime="20230105 16:09:02.672" endtime="20230105 16:09:04.007"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230105 16:09:05.007" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230105 16:09:04.007" endtime="20230105 16:09:05.008"/>
+</kw>
+<status status="PASS" starttime="20230105 16:09:02.671" endtime="20230105 16:09:05.009"/>
+</kw>
+<kw name="Login Succesful">
+<kw name="Page Should Contain" library="Selenium2Library">
+<arg>Identificador:</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230105 16:09:05.115" level="INFO">Current page contains text 'Identificador:'.</msg>
+<status status="PASS" starttime="20230105 16:09:05.009" endtime="20230105 16:09:05.116"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230105 16:09:06.117" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230105 16:09:05.116" endtime="20230105 16:09:06.117"/>
+</kw>
+<status status="PASS" starttime="20230105 16:09:05.009" endtime="20230105 16:09:06.117"/>
+</kw>
+<status status="PASS" starttime="20230105 16:09:00.403" endtime="20230105 16:09:06.118"/>
+</kw>
+<kw name="Ir a trámites predeterminados">
+<kw name="Get Title" library="Selenium2Library">
+<var>${tempb}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20230105 16:09:06.128" level="INFO">${tempb} = ARI - Managua</msg>
+<status status="PASS" starttime="20230105 16:09:06.120" endtime="20230105 16:09:06.129"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>New windows is: \ ${tempb}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 16:09:06.129" endtime="20230105 16:09:06.131"/>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<arg>name=fastway</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20230105 16:09:06.132" level="INFO">Selecting frame 'name=fastway'.</msg>
+<status status="PASS" starttime="20230105 16:09:06.131" endtime="20230105 16:09:06.164"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>name=textSearchId</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230105 16:09:06.165" endtime="20230105 16:09:06.198"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>name=buttonProceeding</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230105 16:09:06.199" level="INFO">Clicking element 'name=buttonProceeding'.</msg>
+<status status="PASS" starttime="20230105 16:09:06.198" endtime="20230105 16:09:06.441"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230105 16:09:07.442" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230105 16:09:06.441" endtime="20230105 16:09:07.443"/>
+</kw>
+<status status="PASS" starttime="20230105 16:09:06.119" endtime="20230105 16:09:07.444"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230105 16:09:08.448" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230105 16:09:07.446" endtime="20230105 16:09:08.448"/>
+</kw>
+<kw name="Ingresar al trámite de sujeto pasivo">
+<kw name="Get Title" library="Selenium2Library">
+<var>${tempb}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20230105 16:09:08.453" level="INFO">${tempb} = ARI - Managua</msg>
+<status status="PASS" starttime="20230105 16:09:08.449" endtime="20230105 16:09:08.454"/>
+</kw>
+<kw name="Unselect Frame" library="Selenium2Library">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20230105 16:09:08.454" endtime="20230105 16:09:08.458"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>New windows is: \ ${tempb}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 16:09:08.458" endtime="20230105 16:09:08.459"/>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<arg>name=rise_content</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20230105 16:09:08.460" level="INFO">Selecting frame 'name=rise_content'.</msg>
+<status status="PASS" starttime="20230105 16:09:08.459" endtime="20230105 16:09:08.487"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>id=dgTypeProceeding_dvClick_85</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230105 16:09:08.487" endtime="20230105 16:09:08.514"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>id=dgTypeProceeding_dvClick_85</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230105 16:09:08.514" level="INFO">Clicking element 'id=dgTypeProceeding_dvClick_85'.</msg>
+<status status="PASS" starttime="20230105 16:09:08.514" endtime="20230105 16:09:11.127"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230105 16:09:12.129" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230105 16:09:11.127" endtime="20230105 16:09:12.129"/>
+</kw>
+<status status="PASS" starttime="20230105 16:09:08.449" endtime="20230105 16:09:12.130"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230105 16:09:13.132" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230105 16:09:12.130" endtime="20230105 16:09:13.132"/>
+</kw>
+<kw name="Validación de creación de Trámite con campos requeridos vacíos">
+<kw name="Unselect Frame" library="Selenium2Library">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20230105 16:09:13.134" endtime="20230105 16:09:13.137"/>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<arg>name=rise_content</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20230105 16:09:13.138" level="INFO">Selecting frame 'name=rise_content'.</msg>
+<status status="PASS" starttime="20230105 16:09:13.137" endtime="20230105 16:09:13.162"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230105 16:09:14.163" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230105 16:09:13.162" endtime="20230105 16:09:14.163"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>name=ibtnCreateProceeding</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230105 16:09:14.164" level="INFO">Clicking element 'name=ibtnCreateProceeding'.</msg>
+<status status="PASS" starttime="20230105 16:09:14.163" endtime="20230105 16:09:14.270"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230105 16:09:16.273" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230105 16:09:14.270" endtime="20230105 16:09:16.274"/>
+</kw>
+<kw name="Handle Alert" library="Selenium2Library">
+<arg>ACCEPT</arg>
+<arg>timeout=3s</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<msg timestamp="20230105 16:09:16.275" level="INFO">HANDLE::&lt;class 'datetime.timedelta'&gt;::0:00:03</msg>
+<status status="PASS" starttime="20230105 16:09:16.274" endtime="20230105 16:09:16.287"/>
+</kw>
+<status status="PASS" starttime="20230105 16:09:13.133" endtime="20230105 16:09:16.287"/>
+</kw>
+<kw name="Detener Grabacion">
+<kw name="Stop Video Recording" library="ScreenCapLibrary">
+<arg>alias=none</arg>
+<doc>Stops the video recording corresponding to the given ``alias`` and generates the file in WebM format. If no
+``alias`` is specified, the last opened recording will be closed. If there are more recordings with the same
+alias all of them will be closed. If ``embed`` argument was set to
+``True`` the video will be displayed in the log file.
+Furthermore, if the ``save_to_disk`` parameter is set to ``False``, the video will be embedded and available in
+the log file only.</doc>
+<msg timestamp="20230105 16:09:16.381" level="INFO" html="true">&lt;a href="Iniciar%20Sesi%C3%B3n_9.webm"&gt;&lt;video width="100px" autoplay&gt;&lt;source src="Iniciar%20Sesi%C3%B3n_9.webm" type="video/webm"&gt;&lt;/video&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230105 16:09:16.291" endtime="20230105 16:09:16.382"/>
+</kw>
+<status status="PASS" starttime="20230105 16:09:16.290" endtime="20230105 16:09:16.384"/>
+</kw>
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230105 16:09:16.387" endtime="20230105 16:09:20.816"/>
+</kw>
+<doc>Creación de sujeto pasivo natural</doc>
+<tag>Sujeto pasivo, trámite</tag>
+<status status="PASS" starttime="20230105 16:08:53.565" endtime="20230105 16:09:20.817"/>
 </test>
-<test id="s1-t2" name="Connect To JIRA And Skip SSL Check" line="17">
-<kw name="Evaluate" library="BuiltIn">
-<arg>urllib3.disable_warnings()</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" starttime="20221229 13:56:39.386" endtime="20221229 13:56:39.388"/>
-</kw>
-<kw name="Connect To Jira" library="JIRALibrary">
-<var>${session}</var>
-<arg>${URL}</arg>
-<arg>${USER}</arg>
-<arg>${PASS}</arg>
-<arg>verify_ssl=${False}</arg>
-<doc>Connect To Jira    https://localhost:443/jira    user   password
-Full list of arguments https://atlassian-python-api.readthedocs.io/index.html</doc>
-<msg timestamp="20221229 13:56:39.391" level="INFO">${session} = &lt;atlassian.jira.Jira object at 0x000000B4BB4B65D0&gt;</msg>
-<status status="PASS" starttime="20221229 13:56:39.389" endtime="20221229 13:56:39.392"/>
-</kw>
-<kw name="Projects" library="JIRALibrary">
-<var>${projects}</var>
-<arg>${session}</arg>
-<doc>Returns all projects which are visible for the currently logged in user.
-If no user is logged in, it returns the list of projects that are visible when using anonymous access.
-:param included_archived: boolean whether to include archived projects in response, default: false
-:param expand:
-:return:</doc>
-<msg timestamp="20221229 13:56:39.877" level="ERROR">Expecting value: line 1 column 1 (char 0)</msg>
-<msg timestamp="20221229 13:56:39.880" level="INFO">${projects} = &lt;!DOCTYPE html&gt;
-
-
-&lt;html id="magnolia" lang="en"&gt; &lt;head&gt; &lt;meta charset="utf-8"&gt; &lt;meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"&gt; &lt;meta name="viewport" content="width=device-width, initia...</msg>
-<status status="PASS" starttime="20221229 13:56:39.395" endtime="20221229 13:56:39.880"/>
-</kw>
-<status status="PASS" starttime="20221229 13:56:39.384" endtime="20221229 13:56:39.881"/>
-</test>
-<test id="s1-t3" name="Add Comment to Issue" line="22">
-<kw name="Connect To Jira" library="JIRALibrary">
-<var>${session}</var>
-<arg>${URL}</arg>
-<arg>${USER}</arg>
-<arg>${PASS}</arg>
-<doc>Connect To Jira    https://localhost:443/jira    user   password
-Full list of arguments https://atlassian-python-api.readthedocs.io/index.html</doc>
-<msg timestamp="20221229 13:56:39.887" level="INFO">${session} = &lt;atlassian.jira.Jira object at 0x000000B4BB4C3810&gt;</msg>
-<status status="PASS" starttime="20221229 13:56:39.886" endtime="20221229 13:56:39.887"/>
-</kw>
-<kw name="Issue Add Comment" library="JIRALibrary">
-<arg>${session}</arg>
-<arg>JIRAID-1234</arg>
-<arg>My long comment !</arg>
-<doc>Add comment into Jira issue
-:param issue_key:
-:param comment:
-:param visibility: OPTIONAL
-:return:</doc>
-<status status="PASS" starttime="20221229 13:56:39.888" endtime="20221229 13:56:40.429"/>
-</kw>
-<status status="PASS" starttime="20221229 13:56:39.884" endtime="20221229 13:56:40.430"/>
-</test>
-<status status="PASS" starttime="20221229 13:56:38.362" endtime="20221229 13:56:40.432"/>
+<status status="PASS" starttime="20230105 16:08:52.788" endtime="20230105 16:09:20.820"/>
 </suite>
 <statistics>
 <total>
-<stat pass="3" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="1" fail="0" skip="0">Sujeto pasivo, trámite</stat>
 </tag>
 <suite>
-<stat pass="3" fail="0" skip="0" id="s1" name="boxModule">boxModule</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Testcase">Testcase</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20221229 13:56:39.366" level="ERROR">Expecting value: line 1 column 1 (char 0)</msg>
-<msg timestamp="20221229 13:56:39.877" level="ERROR">Expecting value: line 1 column 1 (char 0)</msg>
 </errors>
 </robot>

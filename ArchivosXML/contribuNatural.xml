@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <Contribuyente Natural -->
+<users>
+  <user>
+    <primerNom>Juan</primerNom>
+    <segundoNom>Pedro</segundoNom>
+    <comentario>Este es un contribuyente natural de prueba QA</comentario>
+    <primerApe>Fulano</primerApe>
+    <segundoApe>Sipriano</segundoApe>
+    <identificacion>0011234567890A</identificacion>
+    </user>
+</users>

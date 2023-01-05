@@ -47,15 +47,33 @@ Iniciar sesion
     Login Succesful
 
 
-Crear Sujeto Pasivo
+Ir a trámites predeterminados
     ${tempb}=    Get Title
     Log To Console    New windows is: \ ${tempb}
     Select Frame    name=fastway
     Wait Until Element Is Visible    name=textSearchId
-    Input Text       name=textSearchId    0842207680000K
+    Click Element    name=buttonProceeding
     Sleep     1s
-    Click Element    name=buttonSearch
+
+
+Ingresar al trámite de sujeto pasivo
+    ${tempb}=    Get Title
+    Unselect Frame
+    Log To Console    New windows is: \ ${tempb}
+    Select Frame        name=rise_content
+    Wait Until Element Is Visible    id=dgTypeProceeding_dvClick_85
+    Click Element   id=dgTypeProceeding_dvClick_85
     Sleep     1s
+
+Validación de creación de Trámite con campos requeridos vacíos
+    Unselect Frame
+    Select Frame    name=rise_content
+    Sleep     1s
+    Click Element        name=ibtnCreateProceeding
+    Sleep     2s
+    Handle Alert    ACCEPT    timeout=3s   
+
+    
 
 
 *** Variables ***
@@ -71,7 +89,11 @@ Creacion de sujeto pasivo
     Iniciar Grabacion
     [Tags]    Sujeto pasivo, trámite
     Iniciar sesion
-    Crear Sujeto Pasivo
+    Ir a trámites predeterminados
+    Sleep    1s
+    Ingresar al trámite de sujeto pasivo
+    Sleep     1s
+    Validación de creación de Trámite con campos requeridos vacíos
     Detener Grabacion
     Close All Browsers
 
