@@ -71,7 +71,22 @@ Validación de creación de Trámite con campos requeridos vacíos
     Sleep     1s
     Click Element        name=ibtnCreateProceeding
     Sleep     2s
-    Handle Alert    ACCEPT    timeout=3s   
+    Handle Alert    ACCEPT    timeout=3s 
+    Sleep    1s
+    Alert Should Be Present
+    Log To Console    La alerta está presente
+    Sleep    2s
+
+Ingresar cédula del solicitante a buscar
+    Unselect Frame
+    Select Frame     name=rise_content
+    Sleep    1s
+    Click Element    name=textApplicantIdCard
+    ${txtCedula}=    Leer Xml Cedula Solicitante
+    Input Text       name=textApplicantIdCard    ${txtCedula}
+    Sleep    1s
+    Click Element    name=linkShow
+    Sleep    4s
 
     
 
@@ -94,6 +109,8 @@ Creacion de sujeto pasivo
     Ingresar al trámite de sujeto pasivo
     Sleep     1s
     Validación de creación de Trámite con campos requeridos vacíos
+    Sleep     1s
+    Ingresar cédula del solicitante a buscar
     Detener Grabacion
     Close All Browsers
 

@@ -12,3 +12,7 @@ def LeerXmlPass():
     return nombre.firstChild.data
 
 #print(LeerXmlPass())
+def leerXmlCedulaSolicitante():
+    doc=minidom.parse("ArchivosXML/solicitante.xml")
+    nombre=doc.getElementsByTagName("cedula")[0]
+    return nombre.firstChild.data
